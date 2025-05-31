@@ -25,6 +25,9 @@ jobs:
     - name: Compile Java
       run: |
         javac -d build/classes ParkingLotSystemDesign/**/*.java
+
+    - name: Verify build output
+      run: ls -R build/classes
         
     - name: Upload build artifact
       uses: actions/upload-artifact@v3
