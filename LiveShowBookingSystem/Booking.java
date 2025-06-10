@@ -13,7 +13,7 @@ public class Booking {
 
 
     public Booking(Customer customer, ShowSlot showSlot, int numberOfPersons) {
-        this.bookingId = "LBKS" + String.format("%06D", bookingCounter++);
+        this.bookingId = "LBKS" + String.format("%06d", bookingCounter++);
         this.customer = customer;
         this.showSlot = showSlot;
         this.numberOfPersons = numberOfPersons;

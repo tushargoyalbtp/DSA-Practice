@@ -27,15 +27,10 @@ public class TimeSlot {
     }
 
     @Override
-    public String toString() {
-        return String.format("%d:00-%d:00", startHour, endHour);
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) return true;
-        if (obj == null || getClass() != obj.getClass()) return false;
-        TimeSlot timeSlot = (TimeSlot) obj;
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof TimeSlot)) return false;
+        TimeSlot timeSlot = (TimeSlot) o;
         return startHour == timeSlot.startHour && endHour == timeSlot.endHour;
     }
 
@@ -44,5 +39,9 @@ public class TimeSlot {
         return Objects.hash(startHour, endHour);
     }
 
+    @Override
+    public String toString() {
+        return startHour + ":00 - " + endHour + ":00";
+    }
 
 }
