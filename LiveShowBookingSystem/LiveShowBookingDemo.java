@@ -22,6 +22,7 @@ public class LiveShowBookingDemo {
             system.addShowTimeSlot("Stand Up Night", new TimeSlot(19, 20), 50); // 7-8 PM
             system.addShowTimeSlot("Stand Up Night", new TimeSlot(20, 21), 50); // 8-9 PM
             system.addShowTimeSlot("Tech Talk", new TimeSlot(10, 11), 30); // 10-11 AM
+            system.addShowTimeSlot("Tech Talk", new TimeSlot(11, 15), 20); // 11 AM - 3 PM (newly added)
 
             // Search shows
             System.out.println("Comedy Shows Available:");
@@ -30,16 +31,13 @@ public class LiveShowBookingDemo {
 
             // Book tickets
             Booking booking1 = system.bookShow("john_doe", "Stand Up Night", new TimeSlot(19, 20), 2);
-            System.out.println("Booking successful: " + booking1.toString());
+            System.out.println("Booking successful: " + booking1);
 
-            // Try to book overlapping slot (should fail)
-            try {
-                system.bookShow("john_doe", "Tech Talk", new TimeSlot(11, 15), 1);
-            } catch (BookingException e) {
-                System.out.println("Booking failed: " + e.getMessage());
-            }
+            // Book new non-conflicting slot (11–15)
+            Booking booking3 = system.bookShow("john_doe", "Tech Talk", new TimeSlot(11, 15), 1);
+            System.out.println("Booking successful: " + booking3);
 
-            // Book different slot
+            // Book different non-conflicting slot
             Booking booking2 = system.bookShow("john_doe", "Tech Talk", new TimeSlot(10, 11), 1);
             System.out.println("Booking successful: " + booking2);
 
