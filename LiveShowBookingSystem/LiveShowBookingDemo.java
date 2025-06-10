@@ -30,11 +30,11 @@ public class LiveShowBookingDemo {
 
             // Book tickets
             Booking booking1 = system.bookShow("john_doe", "Stand Up Night", new TimeSlot(19, 20), 2);
-            System.out.println("Booking successful: " + booking1);
+            System.out.println("Booking successful: " + booking1.toString());
 
             // Try to book overlapping slot (should fail)
             try {
-                system.bookShow("john_doe", "Tech Talk", new TimeSlot(19, 20), 1);
+                system.bookShow("john_doe", "Tech Talk", new TimeSlot(11, 15), 1);
             } catch (BookingException e) {
                 System.out.println("Booking failed: " + e.getMessage());
             }
