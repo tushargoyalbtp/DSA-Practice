@@ -5,14 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0d84a042-d6fb-4c3a-b582-75ea024a3a1a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/BankingApplication/Account.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BankingApplication/BankService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BankingApplication/BankingAppplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BankingApplication/Customer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlightManagementSystem/Flight.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlightManagementSystem/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LiveShowBookingSystem/Booking.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LiveShowBookingSystem/BookingStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LiveShowBookingSystem/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LiveShowBookingSystem/Exceptions/BookingException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LiveShowBookingSystem/Exceptions/SlotConflictException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LiveShowBookingSystem/Genre.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LiveShowBookingSystem/LiveShow.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LiveShowBookingSystem/LiveShowBookingDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LiveShowBookingSystem/LiveShowBookingSystem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LiveShowBookingSystem/Organizer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LiveShowBookingSystem/PopularityBasedRanking.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LiveShowBookingSystem/RankingStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LiveShowBookingSystem/RatingBasedRanking.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LiveShowBookingSystem/ShowSlot.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LiveShowBookingSystem/TimeBasedRanking.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LiveShowBookingSystem/TimeSlot.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LiveShowBookingSystem/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LiveShowBookingSystem/WaitlistEntry.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DSA-Practice/ParkingLotSystemDesign/LLDRunner.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DSA-Practice/ParkingLotSystemDesign/LLDRunner.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +42,10 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="jar://$USER_HOME$/Library/Java/JavaVirtualMachines/openjdk-23.0.2/Contents/Home/lib/src.zip!/java.base/java/util/stream/ReferencePipeline.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://$USER_HOME$/Library/Java/JavaVirtualMachines/openjdk-23.0.2/Contents/Home/lib/src.zip!/java.base/java/util/stream/Stream.java" root0="SKIP_INSPECTION" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
 }</component>
@@ -46,6 +61,7 @@
   "keyToString": {
     "Application.BankingAppplication.executor": "Run",
     "Application.LLDRunner.executor": "Run",
+    "Application.LiveShowBookingDemo.executor": "Debug",
     "Application.LongestPalindrome.executor": "Debug",
     "Application.LongestSubstringWithoutRepeating.executor": "Run",
     "Application.Solution.executor": "Run",
@@ -59,7 +75,7 @@
     "settings.editor.selected.configurable": "editor.preferences.fonts.default"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.BankingAppplication">
+  <component name="RunManager" selected="Application.LiveShowBookingDemo">
     <configuration name="BankingAppplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="BankingApplication.BankingAppplication" />
       <module name="DSA-Practice" />
@@ -86,9 +102,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LongestPalindrome" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="LongestPalindrome" />
+    <configuration name="LiveShowBookingDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="LiveShowBookingSystem.LiveShowBookingDemo" />
       <module name="DSA-Practice" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="LiveShowBookingSystem.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -109,11 +131,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.LiveShowBookingDemo" />
         <item itemvalue="Application.BankingAppplication" />
         <item itemvalue="Application.LLDRunner" />
         <item itemvalue="Application.Startpattern" />
         <item itemvalue="Application.ZigZagConversion" />
-        <item itemvalue="Application.LongestPalindrome" />
       </list>
     </recent_temporary>
   </component>
@@ -282,6 +304,61 @@
           <line>49</line>
           <option name="timeStamp" value="78" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/LiveShowBookingSystem/LiveShowBookingSystem.java</url>
+          <line>53</line>
+          <option name="timeStamp" value="79" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/LiveShowBookingSystem/LiveShowBookingSystem.java</url>
+          <line>54</line>
+          <option name="timeStamp" value="80" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/LiveShowBookingSystem/LiveShowBookingSystem.java</url>
+          <line>52</line>
+          <option name="timeStamp" value="81" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/LiveShowBookingSystem/LiveShowBookingDemo.java</url>
+          <line>14</line>
+          <option name="timeStamp" value="82" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/LiveShowBookingSystem/LiveShowBookingDemo.java</url>
+          <line>17</line>
+          <option name="timeStamp" value="83" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/LiveShowBookingSystem/LiveShowBookingDemo.java</url>
+          <line>12</line>
+          <option name="timeStamp" value="84" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/LiveShowBookingSystem/LiveShowBookingDemo.java</url>
+          <line>13</line>
+          <option name="timeStamp" value="85" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/LiveShowBookingSystem/LiveShowBookingDemo.java</url>
+          <line>18</line>
+          <option name="timeStamp" value="86" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/LiveShowBookingSystem/LiveShowBookingSystem.java</url>
+          <line>31</line>
+          <option name="timeStamp" value="88" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/LiveShowBookingSystem/LiveShowBookingSystem.java</url>
+          <line>32</line>
+          <option name="timeStamp" value="89" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/LiveShowBookingSystem/LiveShowBookingSystem.java</url>
+          <line>33</line>
+          <option name="timeStamp" value="90" />
+        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/ParkingLotSystemDesign/ParkingLot.java</url>
           <line>28</line>
@@ -326,6 +403,15 @@
             <option name="WATCH_EXIT" value="false" />
           </properties>
           <option name="timeStamp" value="61" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/LiveShowBookingSystem/LiveShowBookingSystem.java</url>
+          <line>30</line>
+          <properties class="LiveShowBookingSystem.LiveShowBookingSystem" method="registerOrganizer">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="87" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-field">
           <url>file://$PROJECT_DIR$/ParkingLotSystemDesign/ParkingFloor.java</url>
